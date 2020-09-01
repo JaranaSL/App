@@ -30,7 +30,7 @@ function onDeviceReady() {
 
 function validClick()
    {
-        window.open("js/inicio.html");
+      //  window.open("js/inicio.html");
       //valid.performClick();
       //document.getElementById("inicioButton").textContent="OK";
    }
