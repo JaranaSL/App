@@ -28,9 +28,12 @@ function onDeviceReady() {
     document.getElementById('deviceready').classList.add('ready');
 }
 
+/*
 function validClick()
    {
-      //  window.open("js/inicio.html");
+      //window.open("js/inicio.html");
       //valid.performClick();
       //document.getElementById("inicioButton").textContent="OK";
    }
+
+*/
