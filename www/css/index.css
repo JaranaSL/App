@@ -16,9 +16,20 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-* {
+
+
+    
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
 }
 
 body {
@@ -31,14 +42,9 @@ body {
     background-color: #E4E4E4;
     background-image: linear-gradient(to bottom, #A7A7A7 0%, #E4E4E4 51%);
     font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
-    font-size: 12px;
-    height: 100vh;
-    margin: 0px;
-    padding: 0px;
+    font-size: 14px;
     /* Padding to avoid the "unsafe" areas behind notches in the screen */
     padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
-    text-transform: uppercase;
-    width: 100%;
 }
 
 /* Portrait layout (default) */
@@ -59,18 +65,19 @@ body {
     margin: -142px 0px 0px -112px;
     /* offset vertical: half of image height and text area height */
     /* offset horizontal: half of text area width */
+    text-transform: uppercase;
 }
 
 .appInicio {
     position: absolute;
     /* position in the center of the screen */
-    left: 20%;
     top: 15%;
+    left: 10%;
     height: 50px;
     /* text area height */
-    width: 225px;
+    width: 80%;
     /* text area width */
-    text-align: center;
+    text-align: left;
 }
 
 .appRegistro {
@@ -107,6 +114,7 @@ body {
         /* offset vertical: half of image height */
         /* offset horizontal: half of image width and text area width */
     }
+
     .appInicio {
         background-position: left center;
         padding: 75px 0px 75px 170px;
@@ -115,6 +123,7 @@ body {
         /* offset vertical: half of image height */
         /* offset horizontal: half of image width and text area width */
     }
+
     .appRegistro {
         background-position: left center;
         padding: 75px 0px 75px 170px;
@@ -123,6 +132,7 @@ body {
         /* offset vertical: half of image height */
         /* offset horizontal: half of image width and text area width */
     }
+
     .appPrincipal {
         background-position: left center;
         padding: 75px 0px 75px 170px;
@@ -143,6 +153,15 @@ h1 {
 }
 
 h2 {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0px;
+    overflow: visible;
+    padding: 0px;
+    text-align: left;
+}
+
+h3 {
     font-size: 16px;
     font-weight: normal;
     margin: 0px;
@@ -151,13 +170,60 @@ h2 {
     text-align: left;
 }
 
-button {
-    font-size: 16px;
+questline {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 1.5em;
+    margin-inline-end: 1.5em;
+    box-sizing: content-box;
+}
+
+questline label {
+    box-sizing: border-box;
+    width: 100%;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+questline input {
+    box-sizing: border-box;
+    width: 100%;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+questline2 {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 1.5em;
+    margin-inline-end: 1.5em;
+    text-align: right;
+}
+
+#instagramBoton {
+    width: 100%;
+    border-radius: 4px;
+    font-size: 20px;
     font-weight: normal;
-    margin: 50px;
+    color: #113355;
+    margin: 0.5em 0px;
     overflow: visible;
-    padding: 30px;
-    text-align: center;
+    padding: 0.5em 0px 0.5em 1em;
+    text-align: left;
+    background: url(../img/jarana_logo.png) no-repeat right center;
+    background-color: #f75e5e;
+}
+
+.quest {
+    border-style: solid;
+    border-color: #0011ff;
+    background-color: #ffffff;
+    border-radius: 4px;
+    color: #000000;
+    font-size: 14px;
+    margin: 0.5em 0px;
 }
 
 .event {
@@ -211,3 +277,5 @@ button {
         background-image: linear-gradient(to bottom, #585858 0%, #1B1B1B 51%);
     }
 }
+
+

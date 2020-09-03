@@ -1,5 +1,3 @@
-document.body.addEventListener("click", cambiarPagina, false);
+function instagramIniciarSesion(){
 
-function cambiarPagina(){
-   location.href = "registro.html";
 }

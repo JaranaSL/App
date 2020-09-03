@@ -40,12 +40,32 @@
     <title>Inicio</title>
 </head>
 
-<body onclick="location.href='.\registro.html';">
+<body>
     <div class="appInicio">
-        <h2>Usuario</h2>
-    </div>
-    <script src="cordova.js"></script>
-    <script src="js/inicio.js"></script>
+        <h3><b>Iniciar Sesión</b></h3>
+        <div class="quest">
+            <questline>
+                <label for="name"><b>Usuario:</b><br></label>
+                <input type="text" name="name" id="name" placeholder="e-mail" autofocus="autofocus"
+                    autocomplete="autocomplete" required="required" />
+            </questline>
+            <questline>
+                <label for="passwd"><b>Contraseña:</b><br></label>
+                <input type="password" name="psswd" id="passwd" placeholder="abc1234"
+                    pattern="[a-z](3)[0-9](4)" required="required" />
+                    <br>
+                     (La contraseña debe contener 3 letras y 4 números en este orden)
+            </questline>
+            <questline2><label> <input type="checkbox" name="sesion" value="iniciada" />Mantener sesion iniciada</label></questline2>
+        </div>
+        <a href="registro.html">Registrarse</a>
+        <a href="principal.html">Continuar</a>
+        <br><br><br>
+        <h3><b>Iniciar Sesión con:</b></h3>
+        <button type="button" id="instagramBoton" onclick="instagramIniciarSesion();">INSTAGRAM</button>
+        
+        <script src="cordova.js"></script>
+        <script src="js/inicio.js"></script>
 </body>
 
 </html>
