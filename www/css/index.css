@@ -18,16 +18,17 @@
  */
 
 
-    
-*{
+
+* {
     margin: 0;
-    padding:0;
+    padding: 0;
     box-sizing: border-box;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
 
-html,body{
+html,
+body {
     width: 100%;
     height: 100%;
 }
@@ -49,35 +50,26 @@ body {
 
 /* Portrait layout (default) */
 .appIndex {
-    background: url(../img/jarana_logo.png) no-repeat center top;
-    /* 241px x 234px*/
-    position: absolute;
-    /* position in the center of the screen */
-    left: 50%;
-    top: 50%;
-    height: 50px;
-    /* text area height */
-    width: 225px;
-    /* text area width */
-    text-align: center;
-    padding: 214px 0px 0px 0px;
-    /* image height is 234px (bottom 20px are overlapped with text) */
-    margin: -142px 0px 0px -112px;
-    /* offset vertical: half of image height and text area height */
-    /* offset horizontal: half of text area width */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
     text-transform: uppercase;
 }
 
 .appInicio {
-    position: absolute;
-    /* position in the center of the screen */
-    top: 15%;
-    left: 10%;
-    height: 50px;
-    /* text area height */
-    width: 80%;
-    /* text area width */
-    text-align: left;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
 }
 
 .appRegistro {
@@ -92,48 +84,31 @@ body {
     text-align: center;
 }
 
-.appPrincipal {
-    position: absolute;
-    /* position in the center of the screen */
-    left: 20%;
-    top: 20%;
-    height: 50px;
-    /* text area height */
-    width: 50px;
-    /* text area width */
-    text-align: center;
-}
-
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
-    .appIndex {
-        background-position: left center;
-        padding: 75px 0px 75px 170px;
-        /* padding-top + padding-bottom + text area = image height */
-        margin: -90px 0px 0px -198px;
-        /* offset vertical: half of image height */
-        /* offset horizontal: half of image width and text area width */
+    .appIndex #logo {
+        height: 100%;
+        display: flex;
+        align-items: center;
     }
 
-    .appInicio {
-        background-position: left center;
-        padding: 75px 0px 75px 170px;
-        /* padding-top + padding-bottom + text area = image height */
-        margin: -90px 0px 0px -198px;
-        /* offset vertical: half of image height */
-        /* offset horizontal: half of image width and text area width */
+    .appInicio .quest {
+        width: 60%;
+    }
+
+    .appInicio h3 {
+        width: 60%;
+    }
+
+    .appInicio #enlaces {
+        width: 60%;
+    }
+
+    .appInicio #instagramBoton {
+        width: 60%;
     }
 
     .appRegistro {
-        background-position: left center;
-        padding: 75px 0px 75px 170px;
-        /* padding-top + padding-bottom + text area = image height */
-        margin: -90px 0px 0px -198px;
-        /* offset vertical: half of image height */
-        /* offset horizontal: half of image width and text area width */
-    }
-
-    .appPrincipal {
         background-position: left center;
         padding: 75px 0px 75px 170px;
         /* padding-top + padding-bottom + text area = image height */
@@ -146,28 +121,40 @@ body {
 h1 {
     font-size: 24px;
     font-weight: normal;
-    margin: 0px;
+    margin: 0;
     overflow: visible;
-    padding: 0px;
+    padding: 0;
     text-align: center;
 }
 
 h2 {
     font-size: 20px;
     font-weight: normal;
-    margin: 0px;
+    margin: 0;
     overflow: visible;
-    padding: 0px;
+    padding: 0;
     text-align: left;
 }
 
 h3 {
+    width: 80%;
     font-size: 16px;
     font-weight: normal;
-    margin: 0px;
+    margin: 3em 0 0 0;
     overflow: visible;
-    padding: 0px;
+    padding: 0;
     text-align: left;
+}
+
+.quest {
+    width: 80%;
+    border-style: solid;
+    border-color: #0011ff;
+    background-color: #ffffff;
+    border-radius: 4px;
+    color: #000000;
+    font-size: 14px;
+    margin: 0.5em 0;
 }
 
 questline {
@@ -202,8 +189,16 @@ questline2 {
     text-align: right;
 }
 
+#enlaces {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding-inline-start: 4px;
+    padding-inline-end: 4px;
+}
+
 #instagramBoton {
-    width: 100%;
+    width: 80%;
     border-radius: 4px;
     font-size: 20px;
     font-weight: normal;
@@ -216,22 +211,12 @@ questline2 {
     background-color: #f75e5e;
 }
 
-.quest {
-    border-style: solid;
-    border-color: #0011ff;
-    background-color: #ffffff;
-    border-radius: 4px;
-    color: #000000;
-    font-size: 14px;
-    margin: 0.5em 0px;
-}
-
 .event {
     border-radius: 4px;
     color: #FFFFFF;
     font-size: 12px;
     margin: 0px 30px;
-    padding: 2px 0px;
+    padding: 2px 4px;
 }
 
 .event.listening {
@@ -271,11 +256,16 @@ questline2 {
     -webkit-animation: fade 3000ms infinite;
 }
 
+.pulsacion{
+    background-color: #0011ff;
+}
+
+#instagramBoton.pulsacion{
+    background-color: #0011ff;
+}
 
 @media screen and (prefers-color-scheme: dark) {
     body {
         background-image: linear-gradient(to bottom, #585858 0%, #1B1B1B 51%);
     }
 }
-
-

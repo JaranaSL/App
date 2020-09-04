@@ -37,7 +37,6 @@ function cambiarPagina(){
 /*
 function validClick()
    {
-      //window.open("js/inicio.html");
       //valid.performClick();
       //document.getElementById("inicioButton").textContent="OK";
    }
