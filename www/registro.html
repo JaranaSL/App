@@ -40,9 +40,48 @@
     <title>Registro</title>
 </head>
 
-<body onclick="location.href='.\inicio.html';">
+<body>
     <div class="appRegistro">
         <h2>Registro</h2>
+        <div class="quest">
+            <mensaje id="mensaje">Mensaje</mensaje>
+            <questline>
+                <label for="user"><b>Usuario:</b><br></label>
+                <input type="text" name="user" id="user" placeholder="e-mail" autofocus="autofocus"
+                    autocomplete="autocomplete" required="required" />
+            </questline>
+            <questline>
+                <label for="passwd"><b>Contraseña:</b><br></label>
+                <input type="password" name="psswd" id="passwd" placeholder="abc1234" pattern="[a-z](3)[0-9](4)"
+                    required="required" />
+                <br>
+                (La contraseña debe contener 3 letras y 4 números en este orden)</br>
+            </questline>
+            <questline>
+                <label for="Rpasswd"><b>Repetir Contraseña:</b><br></label>
+                <input type="password" name="Rpsswd" id="Rpasswd" placeholder="abc1234" pattern="[a-z](3)[0-9](4)"
+                    required="required" />
+            </questline>
+            <questline>
+                <label for="name"><b>Nombre:</b><br></label>
+                <input type="text" name="name" id="name" placeholder="Antonio Garcia Garcia" autofocus="autofocus"
+                    autocomplete="autocomplete" required="required" />
+            </questline>
+            <questline>
+                <label for="musica"><b>Música Favorita:</b><br></label>
+                <input type="text" name="musica" id="musica" placeholder="Rock" autofocus="autofocus"
+                    autocomplete="autocomplete" required="required" />
+            </questline>
+            <questline>
+                <label for="fecha"><b>Fecha Nacimiento:</b><br></label>
+                <input type="text" name="fecha" id="fecha" placeholder="31/01/1999" autofocus="autofocus"
+                    pattern="[0-9](2)[/](1)[0-9](2)[/](1)[0-9](4)" autocomplete="autocomplete" required="required" />
+            </questline>]
+        </div>
+        <div class="Registrar" id="enlaces">
+            <boton id="enlaceBotonContinuar"><b>Continuar</b></boton>
+        </div>
+        <div id="end"></div>
     </div>
     <script src="cordova.js"></script>
     <script src="js/registro.js"></script>

@@ -52,12 +52,13 @@
             </questline>
             <questline>
                 <label for="passwd"><b>Contraseña:</b><br></label>
-                <input type="password" name="psswd" id="passwd" placeholder="abc1234"
-                    pattern="[a-z](3)[0-9](4)" required="required" />
-                    <br>
-                     (La contraseña debe contener 3 letras y 4 números en este orden)
+                <input type="password" name="psswd" id="passwd" placeholder="abc1234" pattern="[a-z](3)[0-9](4)"
+                    required="required" />
+                <br>
+                (La contraseña debe contener 3 letras y 4 números en este orden)</br>
             </questline>
-            <questline2><label> <input type="checkbox" name="sesion" value="iniciada" />Mantener sesion iniciada</label></questline2>
+            <questline2><label> <input type="checkbox" name="sesion" value="iniciada" />Mantener sesion iniciada</label>
+            </questline2>
         </div>
         <div id="enlaces">
             <boton id="enlaceBotonRegistrase"><b>Registrarse</b></boton>
@@ -65,9 +66,10 @@
         </div>
         <h3><b>Iniciar Sesión con:</b></h3>
         <boton id="instagramBoton"><b>INSTAGRAM</b></boton>
-        
-        <script src="cordova.js"></script>
-        <script src="js/inicio.js"></script>
+        <div id="end"></div>
+    </div>
+    <script src="cordova.js"></script>
+    <script src="js/inicio.js"></script>
 </body>
 
 </html>
